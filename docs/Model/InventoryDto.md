@@ -1,0 +1,51 @@
+# InventoryDto
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**inventory_id** | **int** | The unique internal identifier of the  item as is stored in the database. This Id is not visible in the window. | [optional] 
+**inventory_number** | **string** | Mandatory field: The top part &amp;gt; Item Id* &amp;gt; The unique alphanumeric identifier of the stock item. | [optional] 
+**status** | **string** | The top part &amp;gt; Item status &amp;gt; The status of the stock item. The alternatives are: Active, No sales, No purchases, No request, Inactive, Marked for deletion. | [optional] 
+**type** | **string** | General information tab &amp;gt; Item defaults section &amp;gt; Type &amp;gt; The type of stock item. | [optional] 
+**description** | **string** | The top part &amp;gt; Description *&amp;gt; A brief description of the stock item. | [optional] 
+**body** | **string** | The top part &amp;gt; Body *&amp;gt; A brief description of the stock item. | [optional] 
+**item_class** | **object** | Mandatory field: General information tab &amp;gt; Item defaults section &amp;gt; Item class* &amp;gt; The item class to which the stock item is assigned. | [optional] 
+**posting_class** | **object** | Mandatory field: General information tab &amp;gt; Item defaults section &amp;gt; Posting class* &amp;gt; The posting class of the stock item, which by default is the posting class assigned to the item class. | [optional] 
+**vat_code** | **object** | Mandatory field: General information tab &amp;gt; Item defaults section &amp;gt; VAT category* &amp;gt; The VAT code of the stock item, which by default is the VAT code associated with the item class. | [optional] 
+**default_price** | **double** | Price/cost information tab &amp;gt; Price management section &amp;gt; Default price &amp;gt; The price of the stock item. | [optional] 
+**pending_cost** | **double** | Price/cost information tab &amp;gt; Standard cost section &amp;gt; Pending cost &amp;gt; The pending standard cost for the stock item. | [optional] 
+**pending_cost_date** | [**\DateTime**](\DateTime.md) | Price/cost information tab &amp;gt; Standard cost section &amp;gt; Pending cost date &amp;gt; The date when the pending standard cost becomes effective. | [optional] 
+**current_cost** | **double** | Price/cost information tab &amp;gt; Standard cost section &amp;gt; Current cost &amp;gt; Read-only. This field displays the current standard cost for the stock item. | [optional] 
+**effective_date** | [**\DateTime**](\DateTime.md) | Price/cost information tab &amp;gt; Standard cost section &amp;gt; Effective date &amp;gt; Read-only. This field shows the effective date for the current standard cost of the stock item. | [optional] 
+**last_cost** | **double** | Price/cost information tab &amp;gt; Standard cost section &amp;gt; Last cost &amp;gt; Read-only. This field showing the last standard cost defined for the stock item. | [optional] 
+**last_modified_date_time** | [**\DateTime**](\DateTime.md) | Information collected from system. | [optional] 
+**base_unit** | **string** | Mandatory field: General information tab &amp;gt; Unit of measurement section &amp;gt; Base unit* &amp;gt; The UoM used as the base unit for this stock item. | [optional] 
+**sales_unit** | **string** | Mandatory field: General information tab &amp;gt; Unit of measurement section &amp;gt; Sales unit *&amp;gt; The UoM to be used as the sales unit for the stock item. | [optional] 
+**purchase_unit** | **string** | Mandatory field: General information tab &amp;gt; Unit of measurement section &amp;gt; Purchase unit *&amp;gt; The UoM to be used as the purchase unit for the stock item. | [optional] 
+**stock_item** | **bool** |  | [optional] 
+**account_information** | **object** | General ledger account tab &amp;gt; | [optional] 
+**cost_price_statistics** | **object** | Price/cost information tab &amp;gt; | [optional] 
+**cross_references** | [**\Ekstralys\VismaNetApi\Model\InventoryCrossReferenceDto[]**](InventoryCrossReferenceDto.md) | Cross-reference tab &amp;gt; | [optional] 
+**attachments** | [**\Ekstralys\VismaNetApi\Model\AttachmentDto[]**](AttachmentDto.md) | Attributes tab &amp;gt; | [optional] 
+**attributes** | [**\Ekstralys\VismaNetApi\Model\AttributeIdValueDto[]**](AttributeIdValueDto.md) |  | [optional] 
+**warehouse_details** | [**\Ekstralys\VismaNetApi\Model\WarehouseDetailDto[]**](WarehouseDetailDto.md) | Warehouse details tab &amp;gt; | [optional] 
+**inventory_units** | [**\Ekstralys\VismaNetApi\Model\InventoryUnitDto[]**](InventoryUnitDto.md) | General information tab &amp;gt; The Unit conversion table just below the Unit of measurement section. Several fields collected from different parts of the window. | [optional] 
+**default_warehouse** | **object** | General information tab &amp;gt; Warehouse defaults section &amp;gt; Default warehouse &amp;gt; The default warehouse used to store the stock item with the specified item ID. | [optional] 
+**default_issue_from** | **object** | General information tab &amp;gt; Warehouse defaults section &amp;gt; Default issue from &amp;gt; The location of the warehouse to be used by default to issue quantities of the selected stock item. | [optional] 
+**default_receipt_to** | **object** | General information tab &amp;gt; Warehouse defaults section &amp;gt; Default receipt to &amp;gt; The location of warehouse to be used by default to receive certain quantities of the specified stock item. | [optional] 
+**supplier_details** | [**\Ekstralys\VismaNetApi\Model\SupplierDetailsLineDto[]**](SupplierDetailsLineDto.md) | Supplier details tab | [optional] 
+**sales_categories** | [**\Ekstralys\VismaNetApi\Model\SalesCategoryLineDto[]**](SalesCategoryLineDto.md) | Attributes tab &amp;gt; Sales categories grid | [optional] 
+**packaging** | **object** | Packaging tab | [optional] 
+**intrastat** | **object** | General information tab &amp;gt; Intrastat section | [optional] 
+**recommended_price** | **double** | The Price/cost information tab &amp;gt; Price management section &amp;gt; List price &amp;gt; The manufacturer&#39;s suggested retail price (MSRP) of the stock item. | [optional] 
+**price_manager_id** | **string** | The Price/cost information tab &amp;gt; Price management section &amp;gt; Price manager &amp;gt; The ID of the manager responsible for the product pricing. | [optional] 
+**price_manager** | **object** | The Price/cost information tab &amp;gt; Price management section &amp;gt; Price manager &amp;gt; The manager responsible for the product pricing. | [optional] 
+**price_class** | **object** | The Price/cost information tab &amp;gt; Price management section &amp;gt; Price class &amp;gt; The item price class associated with the non-stock item. Group stock or non-stock items with similar price calculation methods. | [optional] 
+**price_workgroup_id** | **int** | The Price/cost information tab &amp;gt; Price management section &amp;gt; Price work group &amp;gt; The work group responsible for product pricing. Select the pricing work group for the stock item. | [optional] 
+**price_class_id** | **string** | The Price/cost information tab &amp;gt; Price management section &amp;gt; Price class &amp;gt; The price class of the item. | [optional] 
+**error_info** | **string** |  | [optional] 
+**metadata** | **object** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -1,0 +1,51 @@
+# CustomerDto
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**internal_id** | **int** |  | [optional] 
+**number** | **string** | Mandatory field: The top part &amp;gt; Customer ID* &amp;gt; The ID of the customer account, which is defined by the BIZACCT segmented key or by the CUSTOMER segmented key. When you are creating a new customer, you must specify an ID. | [optional] 
+**name** | **string** | Mandatory field: The top part &amp;gt; Customer name* &amp;gt; The name of the customer to appear in the system, which may be a trade name or a doing-business-as (DBA) name. | [optional] 
+**status** | **string** | Mandatory field: The top part &amp;gt; Status* &amp;gt; The status of the customer account. You can select one of the following options: Active, On hold, Credit hold, Inactive, One time. | [optional] 
+**main_address** | **object** | General information tab &amp;gt; Main address section &amp;gt; | [optional] 
+**main_contact** | **object** | General information tab &amp;gt; Main contact section &amp;gt; | [optional] 
+**account_reference** | **string** | General information tab &amp;gt; Main contact section &amp;gt; Account ref. &amp;gt; Your company&#39;s account number in the customer&#39;s system. | [optional] 
+**parent_record** | **object** |  | [optional] 
+**customer_class** | **object** | Mandatory field: General information tab &amp;gt; Financial settings section &amp;gt; Customer class* &amp;gt; The class to which the customer is assigned. | [optional] 
+**credit_terms** | **object** | General information tab &amp;gt; Financial settings section &amp;gt; Terms &amp;gt; The type of credit terms used in operations with the customer. | [optional] 
+**currency_id** | **string** | The General information tab &amp;gt; Financial settings section &amp;gt; Currency ID &amp;gt; The currency used in operations with the customer, which you can select from the list of currencies defined in the system. | [optional] 
+**credit_verification** | **string** | The General information tab &amp;gt; Credit verification rules &amp;gt; Credit verification &amp;gt; The credit rule applied to this customer. The following options are available: Days past due, Credit limit, Limit and days past due, disabled. | [optional] 
+**credit_limit** | **double** | The General information tab &amp;gt; Credit verification rules section &amp;gt; Credit limit &amp;gt; The amount, if applicable, that serves as a credit limit for the customer. | [optional] 
+**credit_days_past_due** | **int** | General information tab &amp;gt; Credit verification rules section &amp;gt; Credit days past due &amp;gt; The maximum number of days by which the customer payment may exceed the invoice date. | [optional] 
+**invoice_address** | **object** | Invoicing settings tab &amp;gt; Invoice address section &amp;gt; | [optional] 
+**invoice_contact** | **object** | Invoicing setting tab &amp;gt; Invoice contact section &amp;gt; | [optional] 
+**print_invoices** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Print invoices &amp;gt; A check box that, if selected, indicates that invoices can be printed in the Print invoice (AR508000) window. | [optional] 
+**accept_auto_invoices** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Send invoices to AutoInvoice &amp;gt; Select this check box if you are using AutoInvoice and want to send invoices directly to this service. | [optional] 
+**send_invoices_by_email** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Send invoices by email &amp;gt; A check box that, if selected, indicates that you can send invoices by email by using the Print invoices (AR508000) window. | [optional] 
+**print_statements** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Print statements &amp;gt; A check box that, if selected, indicates that statements can be printed in the Print statements (AR503500) window. | [optional] 
+**send_statements_by_email** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Send statement by email &amp;gt; A check box that, if selected, indicates that statements can be sent by email to customers of the class in the Print statements  (AR503500) window. | [optional] 
+**print_multi_currency_statements** | **bool** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Multi-currency statements &amp;gt; A check box that indicates (if selected) that this customer&#39;s statements must be printed in multi-currency format. | [optional] 
+**statement_type** | **string** | Invoicing settings &amp;gt; Print and email settings section &amp;gt; Statement type &amp;gt; The statement type used by default in relations with the customer, which can be one of the following: Open item, Balance brought forward. | [optional] 
+**delivery_address** | **object** | Delivery settings tab &amp;gt; Shipping address section &amp;gt; | [optional] 
+**delivery_contact** | **object** | Delivery settings tab &amp;gt; Shipping contact section &amp;gt; | [optional] 
+**vat_registration_id** | **string** | Deliver settings tab &amp;gt; Default location settings section &amp;gt; VAT registration ID &amp;gt; The customer&#39;s taxpayer ID associated with the location. | [optional] 
+**corporate_id** | **string** | Delivery settings tab &amp;gt; Default location settings section &amp;gt; Corporate ID &amp;gt; The customers company ID, associated with the location. | [optional] 
+**gln** | **string** | Delivery settings tab &amp;gt; Default location settings section &amp;gt; GLN &amp;gt; The Global Location Number, associated with the location. | [optional] 
+**vat_zone** | **object** | Mandatory field: Delivery settings tab &amp;gt; Default location settings section &amp;gt; VAT Zone* &amp;gt; The VAT zone of the customer&#39;s default location. | [optional] 
+**location** | **object** | Delivery settings tab &amp;gt; Default location settings section &amp;gt; Location name &amp;gt; A description of the customer location. | [optional] 
+**attributes** | [**\Ekstralys\VismaNetApi\Model\AttributeIdValueDto[]**](AttributeIdValueDto.md) | Information collected from the system. Not visible on the screen. | [optional] 
+**last_modified_date_time** | [**\DateTime**](\DateTime.md) | Information collected from the system. Not visible on the screen. | [optional] 
+**created_date_time** | [**\DateTime**](\DateTime.md) | Information collected from the system. Not visible on the screen. | [optional] 
+**direct_debit_lines** | [**\Ekstralys\VismaNetApi\Model\CustomerDirectDebitDto[]**](CustomerDirectDebitDto.md) | Information collected from the system. Not visible on the screen. | [optional] 
+**price_class** | **object** | Deliver settings tab &amp;gt; Default location settings section &amp;gt; Price class &amp;gt; The price class assigned to the customer. | [optional] 
+**gl_accounts** | **object** | Information collected from the system. Some accounts visible in window, some not. | [optional] 
+**invoice_to_default_location** | **bool** | Delivery settings tab &amp;gt; Default location settings &amp;gt; Invoice to default location &amp;gt; A check box indicating that the default location is to be used. | [optional] 
+**e_invoice_contract** | **object** | Other invoice settings tab. | [optional] 
+**payment_methods** | [**\Ekstralys\VismaNetApi\Model\CustomerPaymentMethodInfoDto[]**](CustomerPaymentMethodInfoDto.md) | Payment methods tab. | [optional] 
+**default_payment_method_id** | **string** | Invoicing settings tab &amp;gt; Default payment method section &amp;gt; The default payment method. | [optional] 
+**error_info** | **string** |  | [optional] 
+**metadata** | **object** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

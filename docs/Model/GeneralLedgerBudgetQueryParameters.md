@@ -1,0 +1,19 @@
+# GeneralLedgerBudgetQueryParameters
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**greater_than_value** | **string** | Filter by from date. | [optional] 
+**number_to_read** | **int** | This field has been deprecated and will be removed in future versions. | [optional] 
+**skip_records** | **int** | This field has been deprecated and will be removed in future versions. | [optional] 
+**order_by** | **string** | Order by Last modified date and time. | [optional] 
+**last_modified_date_time** | **string** | System generated value for last modification of transaction/record. Use format: YYYY-MM-DD HH:MM (date and time) to filter from date to present. | [optional] 
+**last_modified_date_time_condition** | **string** | System retrieved information for state/condition. | [optional] 
+**branch** | **string** | Mandatory. Filter by budgets Branch. | [optional] 
+**ledger** | **string** | Mandatory. The budgets Ledger | [optional] 
+**financial_year** | **string** | The budgets financial year. | [optional] 
+**subaccount** | **string** | The Subaccount of the budget article. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
